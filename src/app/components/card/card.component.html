@@ -1,0 +1,36 @@
+<div class="card" [ngClass]="card.plan_name === 'Pro' ? 'white blue' : ''">
+    <header>
+        <img src={{card.image}} alt="imagen de cabecera de la ficha">
+    </header>
+    <div class="card-body">
+        <p class="name">{{card.plan_name}}</p>
+        <p class="price">{{card.price}}</p>
+        <small [ngClass]="card.plan_name === 'Pro' ? 'white' : ''">per month</small>
+        <ul>
+            <li>Full courses library</li>
+            <li>A new daily meditation</li>
+            <li>Access to the meditation guru</li>
+            <li [ngClass]="card.plan_name === 'Starter' ? 'grey' : ''">Sleep podcasts and exercises</li>
+            <li [ngClass]="card.plan_name === 'Starter' ? 'grey' : ''">Mindfulness exercises</li>
+            <li [ngClass]="(card.plan_name === 'Starter' || card.plan_name === 'Pro') ? 'grey' : ''">Guided meditations</li>
+            <li [ngClass]="(card.plan_name === 'Starter' || card.plan_name === 'Pro') ? 'grey' : ''">Guided meditations</li>
+            <li [ngClass]="(card.plan_name === 'Starter' || card.plan_name === 'Pro') ? 'grey' : ''">Cooking recipes</li>
+        </ul>
+    </div>
+    <button *ngIf="card.plan_name === 'Starter'"
+            class="bt-starter"
+            (click)="openModal()">
+            {{card.txt_button}}
+    </button>
+    <button *ngIf="card.plan_name === 'Pro'"
+            class="bt-pro"
+            (click)="openModal()">
+            {{card.txt_button}}
+    </button>
+    <button *ngIf="card.plan_name === 'Teams'"
+            class="bt-teams"
+            (click)="openModal()">
+            {{card.txt_button}}
+    </button>
+</div>
+<div class="modal" #modal></div>

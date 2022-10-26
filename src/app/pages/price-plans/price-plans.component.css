@@ -1,0 +1,8 @@
+@media (min-width: 450px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+}
