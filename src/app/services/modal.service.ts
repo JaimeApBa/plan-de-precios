@@ -14,7 +14,7 @@ export class ModalService {
   openModal(entry: ViewContainerRef) {
     this.componentRef = entry.createComponent(ModalComponent);
     this.componentRef.instance.closeMeEvent.subscribe(() => this.closeModal());
-    this.componentRef.instance.confirmEvent.subscribe(() => this.confirm());
+    this.componentRef.instance.sendEvent.subscribe(() => this.send());
     this.componentSubscriber = new Subject<string>();
     
     return this.componentSubscriber.asObservable();
@@ -25,8 +25,8 @@ export class ModalService {
     this.componentRef.destroy();
   }
 
-  confirm() {
-    this.componentSubscriber.next('confirm');
-    this.closeModal();
+  send() {
+    this.componentSubscriber.next('send');
+   
   }
 }

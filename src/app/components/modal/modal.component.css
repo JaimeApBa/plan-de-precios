@@ -65,11 +65,14 @@ input {
 .modal-body p {
     width: 80%;
     text-align: left;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: -7.5px;
 }
 .btn-container{
     display: flex;
 } 
-#bt-confirm{
+#bt-send{
     width: 100px;
     height: 35px;
     background-color: hsl(247, 87%, 61%);
@@ -82,13 +85,15 @@ input {
     cursor: pointer;
 }
 
+#bt-send:disabled {
+    background-color: hsla(0, 0%, 47%, 0.2);
+    cursor: default;
+}
+
 @media (min-width:480px) {
     
 }
 @media (min-width:667px) {
-    .modal-container{
-        
-    }
     header{
         left: 451px;
     }

@@ -2,13 +2,15 @@
   <header>
     <button id="bt-close" (click)="closeMe()"></button>
   </header>
-    <div class="modal-body">
-      <label for="email">Introduce tu correo electrónico</label>
-      <input type="text" id="email" name="email">
-      <p>Nos pondremos en contacto contigo lo antes posible</p>
+    <div class="modal-body" *ngIf="!isSubmitted">
+      <label for="email">Introduce tu correo electrónico para que podamos contactarte</label>
+      <input type="text" id="email" [formControl]="email">
       <div class="btn-container">
-        <button id="bt-confirm" (click)="confirm()">Confirm</button>
+        <button id="bt-send" (click)="send()" [disabled]="!email.valid">Envia</button>
       </div>
+    </div>
+    <div class="modal-body" *ngIf="isSubmitted">
+      <p>Hemos recibido tu correo electrónico.<br>Nos pondremos en contacto contigo lo antes posible.</p>
     </div>
   </div>
   
