@@ -3,14 +3,14 @@
     <button id="bt-close" (click)="closeMe()"></button>
   </header>
     <div class="modal-body" *ngIf="!isSubmitted">
-      <label for="email">Introduce tu correo electrónico para que podamos contactarte</label>
+      <label for="email">Give us your Email to contact you</label>
       <input type="text" id="email" [formControl]="email">
       <div class="btn-container">
-        <button id="bt-send" (click)="send()" [disabled]="!email.valid">Envia</button>
+        <button id="bt-send" (click)="send()" [disabled]="!email.valid">Send</button>
       </div>
     </div>
     <div class="modal-body" *ngIf="isSubmitted">
-      <p>Hemos recibido tu correo electrónico.<br>Nos pondremos en contacto contigo lo antes posible.</p>
+      <p>We have received your Email.<br>We will contact you as soon as possible.</p>
     </div>
   </div>
   

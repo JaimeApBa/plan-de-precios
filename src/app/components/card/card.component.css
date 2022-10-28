@@ -13,6 +13,9 @@
 }
 .card:hover {
     transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    -webkit-transform: scale(1.06);
 }
 header {
     text-align: center;
@@ -20,6 +23,9 @@ header {
 }
 header img {
     height: 90%;
+    width: auto;
+    max-width: 100%;
+    max-height: auto;
 }
 .card-body {
     display: flex;
