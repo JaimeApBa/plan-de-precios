@@ -1,27 +1,42 @@
 # PlanDePrecios
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
+Este módulo ofrece una propuesta de diseño de tarjetas de planes de precios de uno o diversos productos o servicios de una empresa.
 
-## Development server
+## Uso
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Antes de continuar, puedes ver como se muestra la solución propuesta [aquí](https://plan-de-precios.vercel.app/).
 
-## Code scaffolding
+## Instalación
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Instalaciones previas:
+1. [Angular CLI](https://angular.io/cli).
 
-## Build
+Primero descargar el proyecto y proceder a la instalación de los modulos de Angular: 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```shell
+    # Clonar o instalar comandos
+    npm install
+```
 
-## Running unit tests
+Iniciamos el FrontEnd en *http://localhost:4200* para poder acceder a la página web con el siguiente comando:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```shell
+    # test o ejecutar commandos
+    ng serve
+```
 
-## Running end-to-end tests
+## Stack
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Este módulo ha sido realizado con [Angular](https://angular.io), el cual me ha ayudado a crear por separado diversos componentes reutilizables que componen el diseño propuesto, con la ventaja pueden ser actualizados de manera independiente en cualquier momento. 
 
-## Further help
+## Contribución
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Si estas planeando implementar una nueva funcionalidad, te recomiendo que primero lo comentes conmigo. Crea un nuevo *Issue* con tu nombre y contenido para hablarlo.
+
+## Información de contacto
+
+[@JaimeApBa](https://github.com/JaimeApBa)
+
+## Licencia
+
+El código de este repositorio está bajo licencia open-source. Eres libre de reproducirlo pero no reproduzcas el mismo repositorio con el mismo contenido en cualquier otro lugar.
